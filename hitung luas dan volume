@@ -62,17 +62,3 @@ public class tk2_3 {
         input.close();
     }
 }
-
-
-
-//volume balok V = p x l x t
-//luas permukaan 2 x p x l + 2 x l x t + 2 x p x t
-//= 2 ( pl + lt + pt)
-
-//volume tabung V = phi x r x t
-//luas permukaan L = 2 x phi x r x (r + t)
-
-//volume bola 4 x 1/3 x phi x r^3
-//luas permukaan 4 x phi x r^2
-
-//https://katadata.co.id/safrezi/berita/6178d56d43ea6/rumus-volume-balok-dan-luas-permukaan-balok-beserta-contoh-soal
