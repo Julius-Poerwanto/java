@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class no4 {
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            double tp1, tp2, tk1, tk2, kuis1, kuis2, uas, nilai_akhir;
+            String nim, nama_mahasiswa;
+
+            System.out.print("Masukkan NIM: ");
+            nim = input.next();
+            System.out.print("Nama Mahasiswa: ");
+            nama_mahasiswa = input.next();
+
+
+            System.out.print("Masukkan nilai Tugas Personal ke-1: ");
+            tp1 = input.nextInt();
+            System.out.print("Masukkan nilai Tugas Personal ke-2: ");
+            tp2 = input.nextInt();
+            System.out.print("Masukkan nilai Tugas Kelompok ke-1: ");
+            tk1 = input.nextInt();
+            System.out.print("Masukkan nilai Tugas Kelompok ke-2: ");
+            tk2 = input.nextInt();
+            System.out.print("Masukkan nilai Kuis ke-1: ");
+            kuis1 = input.nextInt();
+            System.out.print("Masukkan nilai Kuis ke-2: ");
+            kuis2 = input.nextInt();
+            System.out.print("Masukkan nilai UAS: ");
+            uas = input.nextInt();
+
+            nilai_akhir = (tp1 * 0.15) + (tp2 * 0.15) + (tk1 * 0.10) + (tk2 * 0.10) + (kuis1 * 0.10) + (kuis2 * 0.10) + (uas * 0.30);
+
+
+            System.out.println("\n========== HASIL AKHIR ==========");
+            System.out.println("NIM: " + nim);
+            System.out.println("Nama Mahasiswa: " + nama_mahasiswa);
+            System.out.println("Nilai Akhir: " + nilai_akhir);
+            
+            if (nilai_akhir >= 85.0) {
+                System.out.println("Grade: A");
+                } else if (nilai_akhir >= 75.0 && nilai_akhir <= 84.9) {
+                    System.out.println("Grade: B");
+                } else if (nilai_akhir >=65.0 && nilai_akhir <= 74.9) {
+                    System.out.println("Grade: C");
+                } else if (nilai_akhir >= 50.0 && nilai_akhir <= 64.9) {
+                    System.out.println("Grade: D");
+                } else System.out.println("Grade: F");
+            }    
+    }
