@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class no3 {
+
+    public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+        int luas_pertama, biaya_per_meter, biaya_lebih, sisa_luas, biaya_sisa_luas, total_luas, biaya_total;
+        String nama_arsitek;
+
+        luas_pertama = 50;
+        biaya_per_meter = 1000000;
+        biaya_lebih = 1500000;
+        sisa_luas = 0;
+        biaya_sisa_luas = 0;
+        biaya_total = 0;
+        
+        System.out.println("========== Biaya Arsitek ==========");
+
+        System.out.print("Masukkan nama arsitek: ");
+        nama_arsitek = input.next();
+        System.out.print("Masukkan luas tanah: ");
+        total_luas = input.nextInt();
+
+        if (total_luas <= luas_pertama) {
+            biaya_total = total_luas * biaya_per_meter;
+        } else if (total_luas > luas_pertama) {
+            biaya_total = luas_pertama * biaya_per_meter;
+            sisa_luas = total_luas - luas_pertama;
+            if (sisa_luas != 0) {
+                biaya_sisa_luas = sisa_luas * biaya_lebih;
+                biaya_total += biaya_sisa_luas;
+            }
+        }
+
+        System.out.println("\n========== Rincian Biaya ==========");
+
+        System.out.println("Nama arsitek: " + nama_arsitek);
+        System.out.println("Total luas: " + total_luas + " m^2");
+        System.out.println("Luas pertama: " + luas_pertama + " m^2");
+        if (total_luas > 50) {
+            System.out.println("Sisa luas: " + sisa_luas + " m^2");
+        }
+        System.out.println("Total harga luas pertama: Rp. " + luas_pertama * biaya_per_meter);
+        if (total_luas > 50) {
+            System.out.println("Total harga sisa luas: Rp. " + biaya_sisa_luas);
+        }
+        System.out.println("Total biaya: Rp. " + biaya_total);
+        }        
+    }
